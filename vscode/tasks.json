@@ -1,0 +1,58 @@
+// Available variables which can be used inside of strings.
+// ${workspaceRoot}: the root folder of the team
+// ${file}: the current opened file
+// ${fileBasename}: the current opened file's basename
+// ${fileDirname}: the current opened file's dirname
+// ${fileExtname}: the current opened file's extension
+// ${cwd}: the current working directory of the spawned process
+
+{
+    "version": "0.1.0",
+    "command": "bash",
+    "suppressTaskName": false,
+    "isShellCommand": true,
+    "showOutput": "always",
+    "options": {
+        "env": {
+            "GOPATH": "/Users/jhourihane/work"
+        }
+    },
+    "args": ["-c"],
+    "tasks": [{
+            "taskName": "sh",
+            "suppressTaskName": true "args": ["${file}"],
+        },
+        {
+            "taskName": "python",
+            "suppressTaskName": true "args": ["${file}"],
+            "isTestCommand": true,
+            "showOutput": "always"
+        },
+        {
+            "taskName": "ruby",
+            "suppressTaskName": true "args": ["${file}"],
+            "isTestCommand": true,
+            "showOutput": "always"
+        },
+        {
+            "taskName": "node",
+            "suppressTaskName": true "args": ["${file}"],
+            "isTestCommand": true,
+            "showOutput": "always"
+        },
+        {
+            "taskName": "go",
+            "isShellCommand": true,
+            "showOutput": "always",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": ["run", "${file}"]
+        },
+        {
+            "command": "g++",
+            "isShellCommand": true,
+            "showOutput": "always",
+            "args": ["run", "${file}"]
+        }
+    ]
+}

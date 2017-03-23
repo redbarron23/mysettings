@@ -1,0 +1,7 @@
+Visual Studio CheatSheet
+
+* Task Runner
+add tasks.json using <CMD><SHIFT><p> - > "Tasks configure Task Runner"
+
+* Compile and Run
+<fn><f5> i.e. function f5
