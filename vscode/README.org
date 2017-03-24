@@ -5,3 +5,6 @@ add tasks.json using <CMD><SHIFT><p> - > "Tasks configure Task Runner"
 
 * Compile and Run
 <fn><f5> i.e. function f5
+
+* if fork/exec problem
+brew install steeve/delve/delve
